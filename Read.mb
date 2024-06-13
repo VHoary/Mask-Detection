@@ -1,0 +1,33 @@
+1.ก่อนการใช้งานโปรแกรม
+    (1) สามารถใช้ env ของตัวโปรแกรมได้หากผู้ใช้ติดตั้ง virtualenv
+    (2) pip install -r requirements.txt
+    (3) สามารถรัน Cell ที่ 1 ในไฟล์ train.ipynb ได้เลย
+    (4) หากไม่มีโฟลเดอร์ชื่อ MASKseg-3 ให้ทำการรัน Cell ที่ 2 ในไฟล์ train.ipynb
+
+    1.1 เปลี่ยนข้อมูลใน app.py
+        model = YOLO("โฟลเดอร์ที่ติดตั้งไฟล์/runs/detect/train/weights/best.pt")
+
+    1.2 ก่อนการใช้งานโปรแกรม train.ipynb
+        1.2.1 เปลี่ยนแปลง patch ในไฟล์ data.yaml : โฟลเดอร์ที่ติดตั้งไฟล์\MASKseg-3\data.yaml
+                (1) test: โฟลเดอร์ที่ติดตั้งไฟล์\MASKseg-3\test\images
+                (2) train: โฟลเดอร์ที่ติดตั้งไฟล์\MASKseg-3\train\images
+                (3) val: โฟลเดอร์ที่ติดตั้งไฟล์\MASKseg-3\valid\images
+        
+        1.2.2 เปลี่ยนแปลง patch ใน Cell ที่ 3
+                data="โฟลเดอร์ที่ติดตั้งไฟล์\MASKseg-3\data.yaml"
+        
+        1.2.3 เปลี่ยนแปลง patch ใน Cell ที่ 4
+                filename=f"โฟลเดอร์ที่ติดตั้งไฟล์/runs/detect/train/labels_correlogram.jpg"
+        
+        1.2.4 เปลี่ยนแปลง patch ใน Cell ที่ 5
+                filename=f"โฟลเดอร์ที่ติดตั้งไฟล์/runs/detect/train/results.png"
+        
+        1.2.5 เปลี่ยนแปลง patch ใน Cell ที่ 6
+                model="โฟลเดอร์ที่ติดตั้งไฟล์/runs/detect/train/weights/best.pt"
+                data="โฟลเดอร์ที่ติดตั้งไฟล์/App/MASKseg-3/data.yaml"
+        
+        1.2.6 เปลี่ยนแปลง patch ใน Cell ที 7
+                model="โฟลเดอร์ที่ติดตั้งไฟล์/runs/detect/train/weights/best.pt"
+                source="โฟลเดอร์ที่ติดตั้งไฟล์/App/MASKseg-3/train/images"
+
+========================================================================================================================================================
